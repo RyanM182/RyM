@@ -1,0 +1,20 @@
+## // Displays the TeamsCreate & TeamsDeleted within 24hrs // ## 
+
+OfficeActivity
+| where Operation == "TeamCreated"
+| join kind=inner (
+  OfficeActivity
+  | where Operation == "TeamDeleted"
+) on TeamName
+| project
+    TimeGenerated,
+	['Action Type Create']=Operation,
+    ['User Who Created']=UserId,
+	['Time Created']=TimeGenerated,
+	['Created Channel Name']=TeamName,
+	['Team Channel GUID']=TeamGuid,
+	['Action Type Delete']=Operation1,
+	['User Who Deleted']=UserId1,
+	['Time Delete']=TimeGenerated1,
+	['Deleted Channel Name']=TeamName1
+| where TimeGenerated > ago(24h)
