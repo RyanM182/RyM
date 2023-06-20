@@ -1,6 +1,6 @@
 ## // File Downgraded and Emailed Outbound \\ ##
 
-let starttime=100d;
+let starttime=90d;
 let timeframe=1m;
 MicrosoftPurviewInformationProtection
 | where TimeGenerated > ago(starttime)
