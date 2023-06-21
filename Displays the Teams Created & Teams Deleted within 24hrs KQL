@@ -1,4 +1,4 @@
-## // Displays the TeamsCreate & TeamsDeleted within 24hrs // ## 
+// Displays the TeamsCreate & TeamsDeleted within 24hrs //
 
 OfficeActivity
 | where Operation == "TeamCreated"
