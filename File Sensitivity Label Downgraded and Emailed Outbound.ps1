@@ -1,6 +1,5 @@
-## // File Downgraded and Emailed Outbound \\ ##
-
-***** v2 *****
+// File Downgraded and Emailed Outbound \\ 
+// ***** v2 *****
 
 let starttime=1d;
 let timeframe=1m;
